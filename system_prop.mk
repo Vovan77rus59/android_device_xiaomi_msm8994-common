@@ -286,7 +286,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.btconfig.chip=QCA6164 \
     persist.power.useautobrightadj=true \
     persist.radio.apm_sim_not_pwdn=1
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.maintainer=guaiyihu

@@ -52,7 +52,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 USE_DEVICE_SPECIFIC_LOC_API := true
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -90,7 +90,7 @@ TARGET_EXFAT_DRIVER := exfat
 USE_REDUCED_CJK_FONT_WEIGHTS := true
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/leo
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8994
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5 loop.max_part=7 androidboot.selinux=permissive
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
@@ -125,6 +125,9 @@ TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/vendor/bin/mm-qcamera-daemon=22
 
+# Light HAL
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
@@ -132,7 +135,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 PROTOBUF_SUPPORTED := true
 
 # Disable HW based full disk encryption
-TARGET_HW_DISK_ENCRYPTION := false
+TARGET_HW_DISK_ENCRYPTION := true
 
 # Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
@@ -157,9 +160,12 @@ BOARD_USES_QCOM_HARDWARE := true
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
-# Ril
+# RIL
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 TARGET_RIL_VARIANT := caf
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2019-02-01
 
 # Remove secdiscard command
 TARGET_REMOVE_SECDISCARD_COMMAND := true
