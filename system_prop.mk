@@ -77,6 +77,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
     media.aac_51_output_enabled=true \
     av.debug.disable.pers.cache=true \
+    hwui.debug.renderer=opengl
 
 #3379827: Decimal sum after adding WAV parser flag
 #37491 is decimal sum of supported codecs in AAL
