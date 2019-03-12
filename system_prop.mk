@@ -201,8 +201,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.sensors.gestures=true \
     ro.qc.sdk.gestures.camera=false \
     ro.qc.sdk.camera.facialproc=false \
-    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner \
-    vendor.camera.hal1.packagelist=com.facebook.katana,com.instagram.android,com.snapchat.android
+    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner
 
 #property to enable user to access Google WFD settings.
 PRODUCT_PROPERTY_OVERRIDES += \
