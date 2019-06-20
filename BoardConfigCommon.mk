@@ -22,9 +22,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 TARGET_USES_64_BIT_BINDER := true
 TARGET_CPU_SMP := true
 
-# SD Clang
-TARGET_USE_SDCLANG := true
-
 # Graphics
 BOARD_USES_ADRENO := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -134,6 +131,16 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+# Dex
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+    endif
+  endif
+endif
+
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
@@ -164,11 +171,13 @@ BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # RIL
+PROTOBUF_SUPPORTED := true
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 TARGET_RIL_VARIANT := caf
+TARGET_USES_OLD_MNC_FORMAT := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2019-04-01
+VENDOR_SECURITY_PATCH := 2019-06-01
 
 # Remove secdiscard command
 TARGET_REMOVE_SECDISCARD_COMMAND := true
