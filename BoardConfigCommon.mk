@@ -128,6 +128,10 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+# CPU Boost
+ENABLE_CPUSETS := true
+ENABLE_SCHED_BOOST := true
+
 # Dex
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
