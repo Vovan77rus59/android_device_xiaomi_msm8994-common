@@ -355,5 +355,4 @@
 
     <bool name="config_useRoundIcon">true</bool>
 
-    <string name="config_recentsComponentName">com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity</string>
 </resources>
