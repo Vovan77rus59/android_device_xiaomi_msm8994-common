@@ -198,6 +198,11 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+
+# Privapp Whitelist
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_msm8994
