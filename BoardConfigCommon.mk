@@ -166,7 +166,6 @@ BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # RIL
-PROTOBUF_SUPPORTED := true
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 TARGET_RIL_VARIANT := caf
 TARGET_USES_OLD_MNC_FORMAT := true
@@ -176,9 +175,6 @@ VENDOR_SECURITY_PATCH := 2019-08-01
 
 # Remove secdiscard command
 TARGET_REMOVE_SECDISCARD_COMMAND := true
-
-# Added to indicate that protobuf-c is supported in this build
-PROTOBUF_SUPPORTED := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN             := true
